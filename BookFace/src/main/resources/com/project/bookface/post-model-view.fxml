@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.bookface.PostModelViewController">
+   <children>
+      <AnchorPane fx:id="viewPost" layoutX="2.0" layoutY="3.0" prefHeight="400.0" prefWidth="600.0" styleClass="template-view-POST" stylesheets="@style.css">
+         <children>
+            <VBox layoutX="108.0" layoutY="86.0" prefHeight="244.0" prefWidth="399.0" spacing="15.0" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="108.0" AnchorPane.rightAnchor="93.0" AnchorPane.topAnchor="86.0">
+               <children>
+                  <HBox prefHeight="9.0" prefWidth="399.0" spacing="125.0">
+                     <children>
+                        <Label fx:id="name" text="Name">
+                           <HBox.margin>
+                              <Insets left="7.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="date" text="Date" />
+                     </children>
+                  </HBox>
+                  <TextArea fx:id="details" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="86.0" prefWidth="351.0" promptText="Details">
+                     <VBox.margin>
+                        <Insets left="7.0" top="10.0" />
+                     </VBox.margin>
+                  </TextArea>
+                  <Label fx:id="likes" text="0">
+                     <VBox.margin>
+                        <Insets left="5.0" top="7.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Button mnemonicParsing="false" onAction="#writeButton" prefHeight="26.0" prefWidth="70.0" style="-fx-background-color: transparent;">
+                     <VBox.margin>
+                        <Insets left="325.0" top="10.0" />
+                     </VBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="writePost" layoutX="5.0" layoutY="3.0" prefHeight="400.0" prefWidth="600.0" styleClass="template-write-POST" stylesheets="@style.css" visible="false">
+         <children>
+            <VBox layoutX="100.0" layoutY="86.0" prefHeight="228.0" prefWidth="399.0" spacing="20.0">
+               <children>
+                  <HBox prefHeight="16.0" prefWidth="399.0" spacing="275.0">
+                     <children>
+                        <Label fx:id="nameW" text="Name" />
+                        <Button mnemonicParsing="false" onAction="#closeButton" prefHeight="26.0" prefWidth="70.0" style="-fx-background-color: transparent;">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </HBox>
+                  <TextArea fx:id="detailsW" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="86.0" prefWidth="351.0" promptText="Details">
+                     <VBox.margin>
+                        <Insets left="15.0" />
+                     </VBox.margin>
+                  </TextArea>
+                  <Button mnemonicParsing="false" onAction="#submitButton" prefHeight="17.0" prefWidth="66.0" style="-fx-background-color: transparent;">
+                     <VBox.margin>
+                        <Insets left="333.0" top="45.0" />
+                     </VBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,15 @@
+.template-view-POST{
+-fx-background-image: url(templates/view_post.png);
+-fx-background-size: contain;
+-fx-background-repeat: no-repeat;
+-fx-background-position: center;
+-fx-background-size: 100% 100%;
+}
+
+.template-write-POST{
+-fx-background-image: url(templates/write_post.png);
+-fx-background-size: contain;
+-fx-background-repeat: no-repeat;
+-fx-background-position: center;
+-fx-background-size: 100% 100%;
+}
